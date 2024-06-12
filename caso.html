@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script
+      src="https://kit.fontawesome.com/e4f0621380.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Manu Farías</title>
+  </head>
+  <body>
+    <header>
+      <span class="logo"
+        >Manu Farías <img src="/assets/Firma.svg" alt=""
+      /></span>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a class="selected" href="/caso.html">Caso de estudio</a></li>
+          <li><a href="/uma.html">Hola Üma</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="summary">
+      <span>Caso de estudio como Diseñador UX</span>
+      <h1 class="summary__title">Mejorando la gestión de registros en Salud</h1>
+    </section>
+
+    <figure class="img--container img--init">
+      <img class="ticket" src="/assets/init.svg" alt="" />
+    </figure>
+
+    <section class="section">
+      <h2 class="section__title problemo">El problema</h2>
+      <p class="section__paragraph">
+        Los administrativos de la mesa de ayuda reciben diariamente solicitudes
+        para gestionar la modificación de registros de profesionales de salud
+        dentro de una red de hospitales.
+      </p>
+      <p class="section__paragraph">
+        Estas solicitudes incluyen datos para la creación y modificación de
+        estos registros.
+      </p>
+      <p class="section__paragraph">
+        La información de la solicitud debe ser validada y transcripta por
+        administrativo, en varias partes del software de gestión, sin un orden
+        claro y sin una forma únificada para realizar aquella tarea.
+      </p>
+      <p class="section__paragraph">
+        Lo anterior dificulta el proceso, y requiere que los administrativos
+        cuenten con la experiencia necesaria para navegar y gestionar
+        adecuadamente los datos dentro del sistema.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">15-40: Errores no forzados</h2>
+      <div class="section__paragraph section__list">
+        <ul>
+          <li>
+            El manejo de tickets se vuelve
+            <span class="bold">un proceso lento e ineficiente</span>, debido a
+            múltiples factores: la dispersión de los datos en diferentes
+            fuentes, la presencia de campos obsoletos en los formularios que
+            solicitan información que ya no se utiliza para la gestión, y la
+            solicitud de información que el administrativo no necesariamente
+            conoce.
+          </li>
+          <li>
+            Con frecuencia
+            <span class="bold">los tickets llegan con datos incompletos</span>:
+            Esto obliga a los administrativos a buscar y validar la información
+            faltante en fuentes externas, como sitios web o mediante llamadas
+            telefónicas, generando una innecesaria carga adicional de trabajo.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Oportuncrisis</h2>
+      <p class="section__paragraph">
+        Tuve la oportunidad de
+        <span class="bold">crear un proceso desde "0"</span> para centralizar
+        para la gestión eficiente de los datos de profesionales de salud.
+        <span class="bold">Logré reducir los tiempos de respuesta</span> y
+        liberar el tiempo de los administrativos para otras tareas mas urgentes.
+      </p>
+      <div class="section__paragraph section__list">
+        <ul>
+          <li>
+            Se unificaron los datos en un tablero organizado de forma lógica, lo
+            que
+            <span class="bold"
+              >disminuyó la pérdida de contexto durante la tarea.</span
+            >
+          </li>
+          <li>
+            <span class="bold"
+              >Se eliminaron los campos heredados de formularios</span
+            >
+            antiguos que no correspondían al flujo actual de trabajo, evitando
+            confusiones.
+          </li>
+          <li>
+            Se implementó el consumo y validación automática de información
+            desde fuentes externaso:
+            <span class="bold">
+              Se redujo las búsquedas manuales y posibles errores por
+              transcripción de datos</span
+            >.
+          </li>
+        </ul>
+      </div>
+
+      <figure class="img--container objetivo">
+        <img class="objetivo" src="/assets/Objetivo.svg" alt="" />
+      </figure>
+    </section>
+
+    <img class="etapa" src="/assets/Comprendiendo.svg" alt="" />
+
+    <section class="section">
+      <h2 class="section__title">Entre(vistas)</h2>
+      <p class="section__paragraph">
+        Para entender la dimensión del problema, seguí los siguientes pasos:
+      </p>
+      <div class="section__paragraph section__list">
+        <ol>
+          <li>
+            <span class="bold">Comprender el modelo de datos</span> (¿Qué es un
+            registro de un profesional de salud para la máquina?): <br />
+            <p class="li--indent">
+              Me entrevisté con el gerente técnico, quien me brindó una visión
+              general del modelo de datos que representa a un profesional de
+              salud y las relaciones entre las diferentes entidades y atributos
+              involucrados en ese dominio.
+            </p>
+          </li>
+          <li>
+            <span class="bold">Identificar el proceso de registro</span>: <br />
+            <p class="li--indent">
+              Me entreviste con los administrativos que realizan la tarea de
+              registro para entender los pasos que implica la gestión del
+              registro del profesional de salud en es el sistema de gestión.
+            </p>
+          </li>
+          <li>
+            <span class="bold"
+              >Identificar la dispersión de datos y fuentes de información: </span
+            ><br />
+            <p class="li--indent">
+              Descubrí que el modelo de un "registro de un profesional de salud"
+              se encuentra repartido en distintas tablas (similares a múltiples
+              hojas de Excel). Los administrativos deben surfear los formularios
+              dentro de las tablas correspondientes para crear una modificación
+              de los registros.
+            </p>
+          </li>
+        </ol>
+      </div>
+      <p class="section__paragraph">
+        Estas entrevistas me permitieron entender cómo era el modelo de datos y
+        como se fragmentación
+        <span class="bold">
+          creaba una tarea adicional para los administradores:</span
+        >
+        <span class="yellow">
+          Ensamblar la información del profesional de salud a partir de
+          múltiples fuentes y datos, lo que dificultaba y ralentizaba el proceso
+          innecesariamente.
+        </span>
+      </p>
+      <figure class="img--container">
+        <img class="ticket" src="/assets/Baseline.svg" alt="" />
+        <figcaption>
+          Era como buscar múltiples agujas en un solo pajar.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">
+        El ticket de ayuda, la causa no el problema
+      </h2>
+      <p class="section__paragraph">
+        Como toda proceso, esa tarea arranca con un simple paso: la recepción de
+        un ticket de solicitud de gestión de datos.
+      </p>
+      <p class="section__paragraph">
+        Gracias a las entrevistas me di cuenta que
+        <span class="bold"
+          >los tickets generalmente no contenían toda la información necesaria
+          para la gestiónla gestión </span
+        >, contaban con datos desactualizados que el administrativo no tenía
+        como validar, o se le solicitaba asociar datos de trabajo dentro de una
+        estructura de salud que el administrativo no tenía porque tener en su
+        cabeza.
+      </p>
+    </section>
+
+    <img class="etapa" src="/assets/Proponiendo.svg" alt="" />
+
+    <section class="section">
+      <h2 class="section__title">
+        Escribir para ordenar, Dibujar para visualizar
+      </h2>
+      <p class="section__paragraph">
+        El siguiente paso que tomé fue escribir el proceso paso a paso, como si
+        fuese un guión. Eso me permitió definir momentos y categorías de datos
+        para describir y visualizar el proceso.
+      </p>
+      <p class="section__paragraph">
+        Luego de llegar a
+        <span class="bold"
+          >las categorías que creaban al registro en el sistema</span
+        >
+        (identidad, profesión y lugar de trabajo), la pregunta era: Si los datos
+        que necesitamos no están en el ticket, ni en la cabeza del
+        administrativo.
+        <span class="bold">¿De donde los podemos traer? </span>Si es que los
+        podíamos traer.
+      </p>
+      <figure class="img--container flow">
+        <img class="ticket" src="/assets/evo.svg" alt="" />
+        <figcaption>
+          El mapear el proceso me permitío entender qué datos se necesitaban y
+          cuales podíamos adelantarnos y ofrecercelos directamente al
+          administrativo.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Aunque lo sueñes (no) todo es posible</h2>
+      <p class="section__paragraph">
+        Vamos a enfocarnos en 2 datos que encontraron en su solución dos
+        destinos muy diferentes:
+      </p>
+
+      <h3 class="section__subtitle">Dígame licenciado, licenciado</h3>
+
+      <p class="section__paragraph">
+        Dentro de las categorías que crean al modelo de "profesional de salud"
+        podemos encontrar
+        <span class="bold">
+          los datos de identidad, los datos de la profesión y los datos
+          pertinentes a el lugar de trabajo </span
+        >dentro de la estructura organizacional de una institución de salud que
+        pertenece a un red de multiples instituciones.
+      </p>
+      <p class="section__paragraph">
+        En el caso de los datos profesionales, hay un dato que no es mejor y que
+        es la licencia, es decir
+        <span class="bold">
+          si el profesional esta habilitado para ejercer su profesión </span
+        >. No es un dato menor.
+      </p>
+      <p class="section__paragraph">
+        Como era de esperar,
+        <span class="bold">
+          ese dato, aunque crítico a veces podía no venir el el ticket </span
+        >, o sí venía los administrativos no tenían, en principio, como validar
+        que ese dato era el correspondiente dentro del sistema.
+      </p>
+      <p class="section__paragraph">
+        <span class="bold">¿Qué debían hacer los administrativos?</span> Tomar
+        el teléfono (si es que lo tenían) y esperar que esa llamada les diera
+        los números de la lotería. En otros casos, ver si lo podían conseguir de
+        alguna base de datos oficial de los profesionales de salud habilitados
+        para ejercer.
+      </p>
+      <p class="section__paragraph">
+        <span class="yellow">Que logré:</span> Que el equipo de desarrollo
+        pudiera consumir ese dato directamente de la base de datos oficial para
+        que trajera el dato actualizado, y
+        <span class="bold">
+          el administrativo solo tuviera que contrastar la información que le
+          ofrece el sistema con el dato contra el declarado en el ticket.
+        </span>
+      </p>
+
+      <div class="img--container matricula">
+        <img class="ticket" src="/assets/json.svg" alt="" />
+        <figcaption>
+          El número de matrícula ahora provenía del servicio oficial de
+          habilitación profesional y traía la última actualización de la
+          matrícula profesional.
+        </figcaption>
+      </div>
+    </section>
+    <section>
+      <h3 class="section__subtitle">Puede malir sal</h3>
+      <p class="section__paragraph">
+        Otro desafío para los administrativos era
+        <span class="bold"
+          >ingresar el lugar correcto del profesionales dentro de una
+          institución. </span
+        >Por ejemplo un médico cardiólogo debía estar trabajando en el
+        departamento de cardiología.
+      </p>
+      <p class="section__paragraph">
+        <span class="bold">
+          ¿Dónde estaba ese departamento en el organigrama institucional?
+        </span>
+        ¿Ese departamento se ubicaba en el mismo en todas las instituciones de
+        la red? Estas eran respuestas que tenían que salir de al cabeza del
+        administrativo, y no, no lo sabía todo. Ese departamento
+        <span class="bold">
+          no necesariamente se encontraba en el mismo lugar </span
+        >, y la mayoría de las veces el administrativo no tenía como saber donde
+        se ubicaba.
+      </p>
+      <p class="section__paragraph">
+        La estructura del organigrama contaba con 4 niveles y
+        <span class="bold">
+          el lugar de trabajo podía estar oculto en casi cualquiera de ellos </span
+        >. Hasta ese momento ellos solo podian seleccionarlo de una lista muy
+        laaarga.
+      </p>
+      <p class="section__paragraph">
+        <span class="yellow">En que fallé:</span> No logré que se implementara
+        porno anticipar la complejidad técnica de la solución.
+        <span class="bold"
+          >no anticipar la complejidad técnica de la solución.</span
+        >
+        La propuesta de diseño era ofrecer un sistema donde la selección de un
+        nivel limitara la oferta del siguiente nivel, a solo los items
+        relacionados con la especialidad que se buscaba.
+      </p>
+      <p class="section__paragraph">
+        En el caso que supiera el lugar, que se pudiera ingresar en un campo de
+        búsqueda para que filtrara automáticamente los niveles y mostrara
+        visualmente el camino en esa institución para ese tipo de profesionales
+        (esto tenía el objetivo de facilitar la tarea y además ofrecerles esa
+        información de forma gratuita).
+      </p>
+
+      <figure class="img--container matricula">
+        <img class="ticket" src="/assets/Buscador.svg" alt="" />
+        <figcaption>
+          Primero era necesario un trabajo de normalización de las tablas y los
+          datos.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Impacto</h2>
+      <div class="section__paragraph section__list">
+        <ul>
+          <li>
+            <span class="yellow">Se unificaron los datos y la tarea</span> en un
+            tablero organizado de forma lógica, lo que disminuye la pérdida de
+            contexto durante la tarea.
+          </li>
+          <li>
+            <span class="yellow">Se eliminaron los campos heredados</span> de Se
+            eliminaron los campos heredados trabajo, evitando confusiones.
+          </li>
+          <li>
+            <span class="yellow"
+              >Se implementó consumo y validación automática de
+              información</span
+            >
+            desde fuentes externas, reduciendo: Las búsquedas manuales y
+            posibles errores por transcripción de datos.
+          </li>
+        </ul>
+      </div>
+      <p class="section__paragraph">
+        <span class="bold"
+          >Efectivamente redujimos los errores no forzados</span
+        >
+        que se presentaban debido a la transcripción redundante de información y
+        acortamos el tiempo que los profesionales necesitaban para esa tarea,
+        simplificando la tarea en un proceso eficiente y comprensible.
+      </p>
+      <figure class="img--container img--init">
+        <img class="ticket" src="/assets/init.svg" alt="" />
+      </figure>
+    </section>
+    <footer>
+      <a class="nav-link" href="/index.html"
+        ><i class="fa-solid fa-chevron-left"></i> Ir al Inicio</a
+      >
+      <a class="nav-link" href="/uma.html"
+        >Hola Üma!<i class="fa-solid fa-chevron-right"></i
+      ></a>
+    </footer>
+  </body>
+</html>

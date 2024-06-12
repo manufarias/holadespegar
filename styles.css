@@ -1,0 +1,321 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Escala tipografica y espaciado */
+
+:root {
+  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vi, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vi, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vi, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vi, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vi, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vi, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vi, 3.8147rem);
+
+  --space-3xs: clamp(0.3125rem, 0.3125rem + 0vi, 0.3125rem);
+  --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vi, 0.625rem);
+  --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vi, 0.9375rem);
+  --space-s: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem);
+  --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vi, 1.875rem);
+  --space-l: clamp(2.25rem, 2.163rem + 0.4348vi, 2.5rem);
+  --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vi, 3.75rem);
+  --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vi, 5rem);
+  --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vi, 7.5rem);
+
+  --text-base: #1e293b;
+  --text-strong: #001f35;
+  --text-weaker: #334c5d;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  color: var(--text-strong);
+  overflow-wrap: break-word;
+}
+
+/* Composición */
+
+html,
+body {
+  block-size: 100%;
+}
+
+body {
+  padding-block: var(--space-s);
+  padding-inline: var(--space-xs);
+}
+
+h2 {
+  font-size: var(--step-2);
+}
+
+h3 {
+  font-size: var(--step-1);
+}
+
+p,
+li {
+  font-size: var(--step-0);
+  color: var(--text-base);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  padding-block-end: var(--space-m);
+}
+
+.logo {
+  display: flex;
+  font-size: var(--step-1);
+  font-weight: 700;
+  min-inline-size: 400px;
+  padding-block-end: var(--space-s);
+  flex: 1;
+}
+
+.logo img {
+  position: relative;
+  left: 6px;
+}
+
+header ul {
+  display: flex;
+  gap: var(--space-s);
+  padding-inline-end: var(--space-m);
+}
+
+header li {
+  list-style: none;
+  color: #475569;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav li a:hover,
+nav li a:focus {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:visited,
+a:active {
+  color: inherit;
+}
+
+.selected {
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--text-strong);
+}
+
+.summary {
+  margin-inline: calc(-1 * var(--space-xs));
+  padding-inline: var(--space-xs);
+  padding-block: var(--space-m);
+
+  margin-block-end: var(--space-xl);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: linear-gradient(141.04deg, #424dfc -8.6%, #272ea0 104.47%);
+}
+.summary__title {
+  font-size: var(--step-4);
+  line-height: 1.2;
+}
+
+.summary__title,
+.summary span {
+  color: #fff;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.section,
+image {
+  padding-block-end: var(--space-s);
+}
+.section__title,
+.section__subtitle,
+.section__paragraph {
+  padding-block-end: var(--space-xs);
+}
+
+.section__paragraph,
+.summary__title {
+  max-inline-size: 800px;
+}
+
+.section__list {
+  padding-inline-start: var(--space-l);
+}
+
+.section__list li {
+  margin-block-start: var(--space-xs);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+}
+
+.section--hero,
+.svg,
+.etapa {
+  padding-block-start: var(--space-s);
+  margin-inline: auto;
+}
+
+.etapa {
+  margin-block: var(--space-2xl);
+  color: #4573a6;
+}
+
+.svg {
+  padding-block-start: var(--space-3xs);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding-block: var(--space-m);
+  color: #4573a6;
+  font-weight: 500;
+}
+
+footer a {
+  font-size: var(--step-0);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+}
+
+.uma__svg {
+  inline-size: 20%;
+  margin-block-end: -20px;
+  margin-inline-start: -4px;
+}
+
+.img--container {
+  max-inline-size: 800px;
+  overflow: hidden;
+  margin-block-end: var(--space-l);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.ticket {
+  object-fit: none;
+  object-position: left top;
+}
+
+figcaption {
+  color: var(--text-weaker);
+  font-size: var(--step--1);
+  margin-block-start: var(--space-xs);
+}
+
+.objetivo {
+  padding: var(--space-m);
+
+  margin-inline-end: auto;
+}
+
+.img--init,
+.summary {
+  margin-block: 0;
+}
+
+.problemo {
+  margin-block-start: var(--space-s);
+}
+
+.flow .ticket {
+  min-block-size: 150px;
+}
+
+.matricula .ticket {
+  object-fit: contain;
+}
+
+.bold {
+  font-weight: 500;
+  color: #133459;
+}
+
+.li--indent {
+  margin-block-start: var(--space-2xs);
+  margin-inline-start: var(--space- xs);
+}
+.yellow {
+  background-color: rgb(247, 247, 5);
+  padding: 2px 5px;
+}
+
+a:link {
+  color: inherit;
+}
