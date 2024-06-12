@@ -253,9 +253,8 @@ footer a {
 }
 
 .uma__svg {
-  inline-size: 20%;
-  margin-block-end: -20px;
-  margin-inline-start: -4px;
+  inline-size: 32%;
+  margin-block-end: var(--space-2xs);
 }
 
 .img--container {
