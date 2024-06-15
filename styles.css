@@ -94,6 +94,8 @@ body {
 body {
   padding-block: var(--space-s);
   padding-inline: var(--space-xs);
+  margin: auto;
+  max-inline-size: 1200px;
 }
 
 h2 {
@@ -113,7 +115,7 @@ li {
 header {
   display: flex;
   flex-wrap: wrap;
-  padding-block-end: var(--space-m);
+  padding-block: var(--space-m);
 }
 
 .logo {
